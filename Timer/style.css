@@ -1,0 +1,29 @@
+#watch{
+    border: 2px solid;
+    width:350px;
+    height:150px;
+    padding:50px;
+    border-radius: 12px;
+    margin: auto;
+    margin-top:5%;
+}
+#timer{
+    font-size:50px;
+    margin-left:35%;
+    margin-bottom: 20px;
+}
+button{
+    height: 40px;
+    width: 80px;
+   margin-left:7%;
+   font-size:20px;
+   border-radius:6px;
+   background-color: rgb(253, 206, 150);
+   border: none;
+   cursor: pointer;
+}
+button:hover{
+    background-color: rgb(246, 181, 102);
+    border: none;
+    border-radius: 12px;
+}

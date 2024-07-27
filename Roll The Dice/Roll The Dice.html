@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Rolling App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .dice {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            line-height: 100px;
+            font-size: 2em;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+        #winner {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .green {
+            background-color: green;
+            color: white;
+        }
+        .yellow {
+            background-color: yellow;
+            color: black;
+        }
+        .red {
+            background-color: red;
+            color: white;
+        }
+        .blue {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="winner">Press "ROLL THE DICE" to start</div>
+    <div class="dice" id="dice1">0</div>
+    <div class="dice" id="dice2">0</div>
+    <div class="dice" id="dice3">0</div>
+    <br>
+    <button onclick="rollDice()">ROLL THE DICE</button>
+
+    <script>
+        function rollDice() {
+            const dice1 = Math.floor(Math.random() * 6) + 1;
+            const dice2 = Math.floor(Math.random() * 6) + 1;
+            const dice3 = Math.floor(Math.random() * 6) + 1;
+
+            document.getElementById('dice1').textContent = dice1;
+            document.getElementById('dice2').textContent = dice2;
+            document.getElementById('dice3').textContent = dice3;
+
+            const scores = [dice1, dice2, dice3];
+            const maxScore = Math.max(...scores);
+            const minScore = Math.min(...scores);
+
+            const diceElements = [
+                document.getElementById('dice1'),
+                document.getElementById('dice2'),
+                document.getElementById('dice3')
+            ];
+
+            diceElements.forEach(dice => {
+                dice.classList.remove('green', 'yellow', 'red', 'blue');
+            });
+
+            let winnerText = 'It\'s a draw!';
+            let colorClasses = ['red', 'red', 'red'];
+
+            if (dice1 !== dice2 || dice2 !== dice3) {
+                colorClasses = scores.map(score => {
+                    if (score === maxScore) return 'green';
+                    if (score === minScore) return 'red';
+                    return 'yellow';
+                });
+
+                winnerText = `The winner is Member ${colorClasses.indexOf('green') + 1} with a score of ${maxScore}`;
+            } else {
+                colorClasses = ['blue', 'blue', 'blue'];
+            }
+
+            diceElements.forEach((dice, index) => {
+                dice.classList.add(colorClasses[index]);
+            });
+
+            document.getElementById('winner').textContent = winnerText;
+        }
+    </script>
+    
+</body>
+</html>

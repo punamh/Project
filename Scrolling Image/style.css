@@ -1,0 +1,14 @@
+#slider {
+    width: 100vw;
+    white-space: nowrap;
+}
+
+.slide {
+    display: inline-block;
+    width:100vw;
+    transition: transform 1s ease-in;  
+}
+
+img {
+    width:100%;
+}
