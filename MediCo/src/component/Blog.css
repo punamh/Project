@@ -1,0 +1,25 @@
+.blog{
+    width: 90%;
+    /* height: 45vh; */
+    /* border: 2px solid; */
+    margin: auto;
+    margin-top:40px;
+    font-family: sans-serif;
+    color:#0A1555;
+}
+.blog2{
+    display: flex;
+    /* border: 2px solid; */
+    gap:20px;
+    padding: 12px;
+}
+.blog2>div{
+    border: 2px solid gainsboro;
+    width:40%;
+    border-radius:12px;
+    padding: 6px;
+}
+.blog2 img{
+    width: 100%;
+    border-radius:12px;
+}

@@ -1,0 +1,38 @@
+.Catagory-box{
+   /* border: 2px solid; */
+   display: flex;
+   justify-content: center;
+   margin-top:40px;
+   gap:30px;
+   text-align: center;
+   font-family: sans-serif;
+}
+.Catagory-box>div{
+    /* border: 2px solid; */
+    height:25vh;
+    width:21%;
+    border-radius: 12px;
+}
+.Catagory-box img{
+    width:55px;
+    margin-top: 25px;
+}
+.Catagory-box p{
+   margin-top: -10px;
+   font-size: 15px;
+}
+.Catagory-box>div:nth-child(1){
+    background-color:rgb(233, 251, 239);
+}
+.Catagory-box>div:nth-child(2){
+    background-color:rgb(254, 243, 213);
+}
+.Catagory-box>div:nth-child(3){
+    background-color:rgb(252, 237, 242);
+}
+.Catagory-box>div:nth-child(4){
+    background-color:rgb(229, 238, 255);
+}
+
+
+
