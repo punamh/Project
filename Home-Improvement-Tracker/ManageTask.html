@@ -1,0 +1,165 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./logo 1.png" />
+    <!-- download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./logo 1.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/ManageTask.css" />
+    <title>Task</title>
+  </head>
+  <!-- download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <body>
+    <!-- nav -->
+    <div id="nav">
+      <div id="logo">
+        <img
+          src="https://i.ibb.co/whDfFM3K/vecteezy-four-rectangle-with-tools-building-11574343.jpg"
+          alt="logo"
+        />
+      </div>
+
+      <h1 id="navH1">Home Improvement Tracker</h1>
+
+      <div id="navText">
+        <a href="Home.html"><h3>Home</h3></a>
+        <a href="DashboardPage.html"><h3>Dashboard</h3></a>
+        <a href="Contractor.html"><h3>Contractors</h3></a>
+      </div>
+
+      <div id="logout">
+        <button id="logout-btn">Log Out</button>
+      </div>
+    </div>
+    <!-- nav -->
+
+    <div id="btns">
+      <a href="#image"><button>Image</button></a>
+      <a href="#task"><button>Task</button></a>
+      <a href="#budget"><button>Budget</button></a>
+    </div>
+
+    <!-- image -->
+    <div id="image">
+      <div id="beforeImage">
+        <h3>Before Image</h3>
+        <input type="file" class="image-input" accept="image/*" />
+        <br />
+        <img class="preview" src="" alt="Preview" style="display: none" />
+      </div>
+
+      <div id="afterImage">
+        <h3>After Image</h3>
+        <input type="file" class="image-input" accept="image/*" />
+        <br />
+        <img class="preview" src="" alt="Preview" style="display: none"/>
+      </div>
+    </div>
+    <div id="DetailPage"></div>
+
+    <!-- task -->
+    <div id="task">
+      <h2>Manage Task</h2>
+      <div id="StatusBox1">
+      <div>
+        <input type="text" id="addTask" placeholder="Enter Task" />
+        <input type="text" id="addDes" placeholder="Enter Description" />
+        <button id="addBtn">Add</button>
+      </div>
+
+      <div id="Status">
+        <div id="showPercent">
+          <p id="showCount"></p>
+        </div>
+      </div>
+    </div>
+
+      <table id="taskTable">
+        <thead>
+          <tr>
+            <th>Task No.</th>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Mark as Done</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    
+    <!-- budget -->
+    <div id="budget">
+       <h2>Budget</h2>
+    <div id="budgetNav">
+      <div>
+      <select name="" id="selectMaterial">
+      <option value="Bricks">Bricks</option>
+      <option value="Cement">Cement</option>
+      <option value="Concrete">Concrete</option>
+      <option value="Labour">Labour</option>
+      <option value="Tiles">Tiles</option>
+    </select>
+
+    <input type="number" id="materialQuantity" placeholder="Enter Quantity" />
+    <!-- <button id="addQuentity">Add Quentity</button> -->
+    <button id="addMaterial">Add</button>
+  </div>
+
+     <div id="finalBudget"></div>
+    </div>
+
+    <div id="materialList"></div>
+    <table border="1" id="materialTable">
+      <thead>
+        <tr>
+          <th>List</th>
+          <th>Material</th>
+          <th>Rate</th>
+          <th>Quantity</th>
+          <th>Total Rate</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+   <button id="DownloadBtn" onclick="downloadPDF()">📥 Download Data as PDF</button>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div>
+        <p>
+          <strong>Home Improvement Tracker</strong> © 2025 | Built with 💻 using
+          Firebase & JavaScript
+        </p>
+
+        <p>
+          <a href="about.html">About</a> | <a href="contact.html">Contact</a> |
+          <a href="privacy.html">Privacy Policy</a> |
+          <a href="terms.html">Terms of Service</a>
+        </p>
+
+        <p>
+          Follow us on: <a href="#" target="_blank">Instagram</a> •
+          <a href="#" target="_blank">YouTube</a> •
+          <a href="#" target="_blank">GitHub</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+<script type="module" src="./js/auth.js"></script>
+<script src="./js/ManageTask.js"></script>
